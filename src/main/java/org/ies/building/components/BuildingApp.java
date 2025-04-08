@@ -28,7 +28,7 @@ public class BuildingApp {
                     var apartment = building.findApartment(floor, door);
                     log.info(apartment.toString());
                 } catch (ApartmentNotFoundException e) {
-                    log.error("No se ha encontrado el apartamento en " + e.getFloor() + e.getDoor());
+                    log.error(e.getMessage());
                 }
             } else if (option == 2) {
                 try {
@@ -37,7 +37,7 @@ public class BuildingApp {
                     var owners = building.findOwners(floor, door);
                     log.info(owners.toString());
                 } catch (ApartmentNotFoundException e) {
-                    log.error("No se ha encontrado el apartamento en " + e.getFloor() + e.getDoor());
+                    log.error(e.getMessage());
                 }
             } else {
                 log.info("Saliendo...");
